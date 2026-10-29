@@ -1,0 +1,693 @@
+:root { color-scheme: light dark; }
+body { margin: 0; }
+
+#forma-shop {
+  --fs-bg:light-dark(#f7f8f5,#171b19);
+  --fs-panel:light-dark(#fff,#222824);
+  --fs-text:light-dark(#1f3029,#eef3ed);
+  --fs-muted:light-dark(#657169,#adb9b0);
+  --fs-line:light-dark(#dce2db,#3b4840);
+  --fs-soft:light-dark(#edf1e9,#2c362f);
+  --fs-accent:#24634c;
+  --fs-on:#fff;
+  --fs-radius:16px;
+  font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:var(--fs-text);
+  background:var(--fs-bg);
+  min-width:0;
+  min-height:100dvh;
+  display:flex;
+  flex-direction:column}
+
+#forma-shop * {
+  box-sizing:border-box}
+#forma-shop button,#forma-shop input,#forma-shop select,#forma-shop textarea {
+  font:inherit}
+#forma-shop button {
+  color:inherit}
+#forma-shop button:disabled {
+  opacity:.5;
+  cursor:not-allowed}
+#forma-shop button {
+  touch-action:manipulation}
+#forma-shop .fs-header {
+  background:var(--fs-panel);
+  display:flex;
+  align-items:center;
+  gap:24px;
+  padding:22px 32px;
+  border-bottom:1px solid var(--fs-line);
+  flex-wrap:wrap}
+#forma-shop .fs-brand {
+  border:0;
+  background:none;
+  font-size:25px;
+  font-weight:750;
+  letter-spacing:-1px;
+  padding:0;
+  display:flex;
+  align-items:center;
+  gap:9px}
+#forma-shop .fs-mark {
+  display:inline-block;
+  width:24px;
+  height:24px;
+  background:var(--fs-accent);
+  border-radius:8px 8px 8px 0}
+#forma-shop .fs-nav {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-left:auto}
+#forma-shop .fs-link {
+  border:0;
+  background:transparent;
+  padding:8px 4px;
+  color:var(--fs-muted);
+  text-decoration:none}
+#forma-shop .fs-link:hover {
+  color:var(--fs-text)}
+#forma-shop .fs-count {
+  background:var(--fs-soft);
+  border-radius:20px;
+  padding:2px 7px;
+  margin-left:5px;
+  color:var(--fs-text)}
+#forma-shop .fs-main {
+  padding:32px;
+  min-height:560px}
+#forma-shop h1 {
+  font-size:36px;
+  line-height:1.13;
+  letter-spacing:-1.2px;
+  margin:0 0 16px;
+  font-weight:650}
+#forma-shop h2 {
+  font-size:22px;
+  line-height:1.3;
+  letter-spacing:-.5px;
+  margin:0 0 18px;
+  font-weight:600}
+#forma-shop h3 {
+  font-size:16px;
+  line-height:1.4;
+  margin:0;
+  font-weight:600}
+#forma-shop p {
+  margin:0 0 16px}
+#forma-shop .fs-muted {
+  color:var(--fs-muted)}
+#forma-shop .fs-kicker {
+  font-size:11px;
+  letter-spacing:1.7px;
+  text-transform:uppercase;
+  color:var(--fs-muted);
+  margin-bottom:14px}
+#forma-shop .fs-hero {
+  display:flex;
+  justify-content:space-between;
+  align-items:end;
+  gap:24px;
+  padding:4px 0 28px}
+#forma-shop .fs-hero h1 {
+  font-size:40px;
+  margin-bottom:12px}
+#forma-shop .fs-hero p {
+  margin:0;
+  max-width:380px}
+#forma-shop .fs-stamp {
+  border:1px solid var(--fs-line);
+  border-radius:50%;
+  width:88px;
+  height:88px;
+  display:grid;
+  place-content:center;
+  text-align:center;
+  flex-shrink:0;
+  color:var(--fs-muted);
+  font-size:11px;
+  letter-spacing:1px;
+  transform:rotate(8deg)}
+#forma-shop .fs-stamp b {
+  font-size:23px;
+  font-weight:500;
+  color:var(--fs-text)}
+#forma-shop .fs-controls {
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:20px}
+#forma-shop .fs-search {
+  flex:1;
+  min-width:180px}
+#forma-shop input,#forma-shop select,#forma-shop textarea {
+  width:100%;
+  border:1px solid var(--fs-line);
+  background:var(--fs-panel);
+  color:var(--fs-text);
+  border-radius:10px;
+  padding:12px 14px;
+  min-height:44px}
+#forma-shop .fs-sort {
+  width:auto;
+  max-width:100%}
+#forma-shop .fs-chips {
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-bottom:26px}
+#forma-shop .fs-chip {
+  border:1px solid var(--fs-line);
+  border-radius:24px;
+  background:transparent;
+  padding:8px 16px}
+#forma-shop .fs-chip[aria-pressed=true] {
+  background:var(--fs-text);
+  border-color:var(--fs-text);
+  color:var(--fs-bg)}
+#forma-shop .fs-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:22px 18px}
+#forma-shop .fs-product {
+  min-width:0}
+#forma-shop .fs-art-button {
+  display:block;
+  width:100%;
+  padding:0;
+  border:0;
+  background:transparent}
+#forma-shop .fs-art {
+  height:190px;
+  background:var(--fs-soft);
+  border-radius:var(--fs-radius);
+  display:grid;
+  place-items:center;
+  position:relative;
+  overflow:hidden;
+  color:light-dark(#394b43,#c3d0c5)}
+#forma-shop .fs-art::after {
+  content:"";
+  position:absolute;
+  bottom:24px;
+  width:95px;
+  height:10px;
+  border-radius:50%;
+  background:light-dark(#183b2d18,#0003);
+  filter:blur(6px)}
+#forma-shop .fs-art.sand {
+  background:light-dark(#f0eae0,#373229)}
+#forma-shop .fs-art.blue {
+  background:light-dark(#e7eef1,#28343b)}
+#forma-shop .fs-art.rose {
+  background:light-dark(#f0e7e4,#3b2d2a)}
+#forma-shop .fs-art.lilac {
+  background:light-dark(#eae8f1,#312f40)}
+#forma-shop .fs-art.slate {
+  background:light-dark(#e6e9e8,#303837)}
+#forma-shop .fs-art .fs-device {
+  position:relative;
+  z-index:1;
+  filter:drop-shadow(0 10px 7px #0002)}
+
+#forma-shop .headphones {
+  width:92px;
+  height:108px;
+  border:11px solid currentColor;
+  border-bottom:0;
+  border-radius:60px 60px 10px 10px;
+  transform:rotate(-14deg)}
+#forma-shop .headphones:before,#forma-shop .headphones:after {
+  content:"";
+  position:absolute;
+  bottom:-6px;
+  width:26px;
+  height:53px;
+  border-radius:13px;
+  background:currentColor;
+  box-shadow:inset 5px 0 0 #ffffff20}
+#forma-shop .headphones:before {
+  left:-16px}
+#forma-shop .headphones:after {
+  right:-16px}
+#forma-shop .keyboard {
+  width:150px;
+  height:72px;
+  border:7px solid currentColor;
+  border-radius:9px;
+  transform:rotate(-12deg);
+  background:repeating-linear-gradient(90deg,transparent 0 12px,currentColor 12px 16px),repeating-linear-gradient(0deg,#ffffff70 0 12px,currentColor 12px 16px)}
+#forma-shop .speaker {
+  width:70px;
+  height:112px;
+  border:6px solid currentColor;
+  border-radius:21px;
+  background:repeating-linear-gradient(0deg,transparent 0 3px,currentColor 3px 5px);
+  transform:rotate(12deg)}
+#forma-shop .mouse {
+  width:66px;
+  height:104px;
+  background:currentColor;
+  border-radius:38px 38px 32px 32px;
+  transform:rotate(-20deg);
+  box-shadow:inset -10px 0 #0002}
+#forma-shop .mouse:after {
+  content:"";
+  position:absolute;
+  top:17px;
+  left:30px;
+  width:6px;
+  height:20px;
+  border-radius:6px;
+  background:#ffffff80}
+#forma-shop .buds {
+  width:102px;
+  height:70px;
+  background:currentColor;
+  border-radius:20px 20px 31px 31px;
+  transform:rotate(-12deg);
+  box-shadow:inset 0 17px #ffffff30}
+#forma-shop .buds:after {
+  content:"";
+  position:absolute;
+  top:20px;
+  left:0;
+  width:100%;
+  height:2px;
+  background:#0003}
+#forma-shop .lamp {
+  width:10px;
+  height:100px;
+  background:currentColor;
+  transform:rotate(-8deg)}
+#forma-shop .lamp:before {
+  content:"";
+  position:absolute;
+  left:-37px;
+  top:-8px;
+  width:84px;
+  height:38px;
+  background:currentColor;
+  border-radius:45px 45px 8px 8px}
+#forma-shop .lamp:after {
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:-30px;
+  width:70px;
+  height:12px;
+  background:currentColor;
+  border-radius:50%}
+#forma-shop .fs-badge {
+  position:absolute;
+  top:12px;
+  left:12px;
+  z-index:2;
+  background:var(--fs-panel);
+  border-radius:5px;
+  padding:4px 8px;
+  font-size:11px;
+  color:var(--fs-text)}
+#forma-shop .fs-product-info {
+  padding:14px 2px 0}
+#forma-shop .fs-product-info .fs-link {
+  padding:0;
+  text-align:left;
+  color:var(--fs-text)}
+#forma-shop .fs-product-bottom {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-top:12px}
+#forma-shop .fs-price {
+  font-size:19px;
+  font-weight:600;
+  white-space:nowrap}
+#forma-shop .fs-button {
+  border:1px solid var(--fs-line);
+  background:var(--fs-panel);
+  border-radius:10px;
+  padding:10px 15px;
+  min-height:42px;
+  display:inline-flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  text-decoration:none}
+#forma-shop .fs-primary {
+  background:var(--fs-accent);
+  color:var(--fs-on);
+  border-color:var(--fs-accent)}
+#forma-shop .fs-full {
+  width:100%}
+#forma-shop .fs-small {
+  font-size:12px}
+#forma-shop .fs-footer {
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  padding:20px 32px;
+  border-top:1px solid var(--fs-line);
+  color:var(--fs-muted);
+  font-size:12px}
+#forma-shop .fs-back {
+  margin-bottom:22px;
+  display:inline-flex;
+  align-items:center;
+  gap:8px}
+#forma-shop .fs-detail {
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:42px;
+  align-items:center}
+#forma-shop .fs-detail .fs-art {
+  height:370px}
+#forma-shop .fs-detail .fs-device {
+  scale:1.65}
+#forma-shop .fs-detail h1 {
+  margin-top:12px}
+#forma-shop .fs-stock {
+  color:light-dark(#24634c,#a0d5b9);
+  font-size:12px;
+  margin:15px 0}
+#forma-shop .fs-detail .fs-price {
+  font-size:28px;
+  display:block;
+  margin:24px 0 16px}
+#forma-shop .fs-specs {
+  margin-top:28px;
+  border-top:1px solid var(--fs-line);
+  padding-top:18px}
+#forma-shop .fs-specs div {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  margin:8px 0}
+#forma-shop .fs-columns {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 290px;
+  gap:28px;
+  align-items:start}
+#forma-shop .fs-panel {
+  border:1px solid var(--fs-line);
+  border-radius:var(--fs-radius);
+  padding:24px;
+  background:var(--fs-panel)}
+#forma-shop .fs-line-item {
+  display:grid;
+  grid-template-columns:84px minmax(0,1fr) auto;
+  gap:18px;
+  align-items:center;
+  padding:22px 0;
+  border-bottom:1px solid var(--fs-line)}
+#forma-shop .fs-line-item:first-child {
+  padding-top:0}
+#forma-shop .fs-line-item .fs-art {
+  height:90px;
+  border-radius:10px}
+#forma-shop .fs-line-item .fs-device {
+  scale:.55}
+#forma-shop .fs-quantity {
+  display:inline-flex;
+  align-items:center;
+  border:1px solid var(--fs-line);
+  border-radius:8px;
+  margin-top:12px;
+  background:var(--fs-panel)}
+#forma-shop .fs-quantity button {
+  border:0;
+  background:none;
+  width:34px;
+  min-height:34px}
+#forma-shop .fs-quantity span {
+  min-width:28px;
+  text-align:center}
+#forma-shop .fs-row {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:14px}
+#forma-shop .fs-total {
+  border-top:1px solid var(--fs-line);
+  padding-top:18px;
+  margin-top:20px;
+  font-size:20px;
+  font-weight:600}
+#forma-shop .fs-note {
+  font-size:12px;
+  color:var(--fs-muted);
+  margin:14px 0 0;
+  text-align:center}
+#forma-shop .fs-auth {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:44px;
+  align-items:center;
+  max-width:800px;
+  margin:12px auto}
+#forma-shop .fs-auth-aside {
+  background:var(--fs-soft);
+  padding:35px;
+  border-radius:var(--fs-radius);
+  min-height:380px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center}
+#forma-shop .fs-auth-aside .fs-art {
+  height:150px}
+#forma-shop .fs-auth-aside h2 {
+  font-size:29px;
+  letter-spacing:-.8px;
+  margin-top:20px}
+#forma-shop .fs-field {
+  display:block;
+  margin-bottom:16px;
+  font-size:13px;
+  font-weight:500}
+#forma-shop .fs-field input,#forma-shop .fs-field textarea {
+  margin-top:7px;
+  font-weight:400}
+#forma-shop .fs-fields {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:0 16px}
+#forma-shop .fs-error {
+  color:light-dark(#a63131,#ffb5ad);
+  font-size:12px;
+  margin:7px 0 0;
+  font-weight:400}
+#forma-shop .fs-error:empty {
+  display:none}
+#forma-shop [aria-invalid=true] {
+  border-color:light-dark(#a63131,#ffb5ad)}
+#forma-shop .fs-auth-form h1 {
+  font-size:30px}
+#forma-shop .fs-auth-switch {
+  margin-top:20px;
+  text-align:center;
+  font-size:13px}
+#forma-shop .fs-auth-switch .fs-link {
+  color:light-dark(var(--fs-accent),#aad1bc);
+  font-weight:600}
+#forma-shop .fs-checkout h2 {
+  margin-top:8px}
+#forma-shop .fs-steps {
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  align-items:center;
+  font-size:12px;
+  color:var(--fs-muted);
+  margin-bottom:24px}
+#forma-shop .fs-steps .fs-current {
+  color:var(--fs-text);
+  font-weight:600}
+#forma-shop .fs-order-mini {
+  padding-bottom:14px;
+  margin-bottom:16px;
+  border-bottom:1px solid var(--fs-line)}
+#forma-shop .fs-success {
+  max-width:560px;
+  text-align:center;
+  margin:20px auto}
+#forma-shop .fs-success-mark {
+  width:66px;
+  height:66px;
+  margin:0 auto 24px;
+  border-radius:50%;
+  display:grid;
+  place-items:center;
+  background:var(--fs-soft);
+  color:light-dark(#24634c,#a0d5b9)}
+#forma-shop .fs-success .fs-panel {
+  text-align:left;
+  margin:26px 0}
+#forma-shop .fs-empty {
+  text-align:center;
+  padding:70px 20px}
+#forma-shop .fs-empty h2 {
+  margin-bottom:8px}
+#forma-shop svg {
+  vertical-align:middle;
+  flex-shrink:0}
+#forma-shop .fs-sr {
+  position:absolute;
+  width:1px;
+  height:1px;
+  padding:0;
+  overflow:hidden;
+  clip:rect(0,0,0,0);
+  white-space:nowrap;
+  border:0}
+
+@media(max-width:780px) {
+  #forma-shop .fs-main {
+  padding:24px}
+#forma-shop .fs-columns {
+  grid-template-columns:minmax(0,1fr) 250px;
+  gap:18px}
+#forma-shop .fs-auth {
+  gap:24px}
+#forma-shop .fs-auth-aside {
+  padding:24px}
+#forma-shop .fs-grid {
+  grid-template-columns:repeat(2,minmax(0,1fr))}
+#forma-shop .fs-header {
+  padding:18px 24px;
+  gap:12px}
+}
+
+@media(max-width:600px) {
+  #forma-shop .fs-columns:has(.fs-checkout)>aside {
+  grid-row:1}
+#forma-shop .fs-main {
+  padding:22px 16px}
+#forma-shop .fs-header {
+  padding:16px;
+  gap:10px}
+#forma-shop .fs-brand {
+  font-size:22px}
+#forma-shop .fs-nav {
+  gap:8px;
+  font-size:12px}
+#forma-shop .fs-header>.fs-link {
+  display:none}
+#forma-shop .fs-hero h1 {
+  font-size:30px}
+#forma-shop .fs-stamp {
+  display:none}
+#forma-shop .fs-grid {
+  gap:22px 12px}
+#forma-shop .fs-art {
+  height:150px}
+#forma-shop .fs-art .fs-device {
+  scale:.8}
+#forma-shop .fs-product-bottom {
+  align-items:start;
+  flex-direction:column}
+#forma-shop .fs-product-bottom button {
+  width:100%}
+#forma-shop .fs-product .fs-product-title {
+  font-size:14px}
+#forma-shop .fs-price {
+  font-size:17px}
+#forma-shop .fs-detail,#forma-shop .fs-columns,#forma-shop .fs-auth {
+  grid-template-columns:1fr;
+  gap:24px}
+#forma-shop .fs-detail .fs-art {
+  height:260px}
+#forma-shop .fs-detail .fs-device {
+  scale:1.3}
+#forma-shop .fs-auth-aside {
+  display:none}
+#forma-shop .fs-auth-form {
+  max-width:380px;
+  width:100%;
+  margin:auto}
+#forma-shop .fs-fields {
+  grid-template-columns:1fr}
+#forma-shop h1 {
+  font-size:29px}
+#forma-shop .fs-footer {
+  padding:18px 16px}
+#forma-shop .fs-line-item {
+  grid-template-columns:64px minmax(0,1fr);
+  gap:12px}
+#forma-shop .fs-line-item>.fs-item-price {
+  grid-column:2}
+#forma-shop .fs-line-item .fs-art {
+  height:74px}
+#forma-shop .fs-line-item .fs-device {
+  scale:.44}
+#forma-shop input,#forma-shop textarea,#forma-shop select {
+  font-size:16px}
+#forma-shop .fs-panel {
+  padding:20px}
+#forma-shop .fs-button,#forma-shop .fs-link,#forma-shop .fs-chip {
+  min-height:44px}
+#forma-shop .fs-quantity button {
+  min-height:44px;
+  width:40px}
+}
+
+
+/* Full-page shell and real form states. The product artwork follows the approved mockup. */
+#forma-shop { color-scheme: light dark; }
+#forma-shop a { color: inherit; }
+#forma-shop button, #forma-shop a, #forma-shop select { cursor: pointer; }
+#forma-shop a:focus-visible, #forma-shop button:focus-visible, #forma-shop input:focus-visible,
+#forma-shop select:focus-visible, #forma-shop textarea:focus-visible { outline: 3px solid light-dark(#659e83, #9dd4b8); outline-offset: 3px; }
+#forma-shop .fs-brand { text-decoration: none; color: var(--fs-text); }
+#forma-shop .fs-main { width: 100%; max-width: 1200px; margin: 0 auto; flex: 1; }
+#forma-shop .fs-header, #forma-shop .fs-footer { padding-left: max(32px, calc((100% - 1136px) / 2)); padding-right: max(32px, calc((100% - 1136px) / 2)); }
+#forma-shop .fs-nav { min-width: 0; }
+#forma-shop .fs-cart-link { white-space: nowrap; }
+#forma-shop .fs-account-name { max-width: 160px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#forma-shop .fs-product-title { font-size: 16px; font-weight: 600; line-height: 1.4; letter-spacing: 0; margin: 0; }
+#forma-shop .fs-link { display: inline-flex; align-items: center; color: var(--fs-muted); }
+#forma-shop .fs-link:hover { color: var(--fs-text); }
+#forma-shop .fs-primary { color: var(--fs-on); }
+#forma-shop .fs-primary:hover:not(:disabled) { filter: brightness(1.1); }
+#forma-shop .fs-auth-switch .fs-link { color: light-dark(var(--fs-accent), #aad1bc); }
+#forma-shop .fs-art-button { text-decoration: none; }
+#forma-shop .fs-continue { margin-top: 18px; }
+#forma-shop .fs-specs { margin-left: 0; margin-right: 0; }
+#forma-shop .fs-specs dd { margin: 0; text-align: right; }
+#forma-shop .fs-note { margin: 14px 0 0; }
+#forma-shop .fs-section-heading { margin-top: 16px; }
+#forma-shop .fs-field { min-width: 0; }
+#forma-shop .fs-field .fs-small { margin-top: 6px; }
+#forma-shop fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+#forma-shop textarea { resize: vertical; }
+#forma-shop .fs-form-error:not(:empty) { margin: 0 0 16px; }
+#forma-shop .fs-notice { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 16px; margin-bottom: 24px; border-radius: 10px; background: var(--fs-soft); }
+#forma-shop .fs-notice-error { color: light-dark(#a63131, #ffb5ad); }
+#forma-shop .fs-notice .fs-link { padding: 0; min-width: 32px; min-height: 32px; justify-content: center; }
+#forma-shop .fs-loading { padding: 90px 16px; display: flex; align-items: center; justify-content: center; gap: 14px; color: var(--fs-muted); }
+#forma-shop .fs-spinner { width: 20px; height: 20px; border: 2px solid var(--fs-line); border-top-color: var(--fs-accent); border-radius: 50%; animation: spin .8s linear infinite; }
+#forma-shop .fs-order-mini .fs-row { margin: 6px 0 0; }
+#forma-shop .fs-success .fs-total { margin-bottom: 0; }
+#forma-shop .fs-success-mark { font-size: 28px; }
+#forma-shop .fs-nowrap { white-space: nowrap; }
+#forma-shop .fs-skip { position: absolute; top: 8px; left: 8px; transform: translateY(-200%); background: var(--fs-panel); color: var(--fs-text); padding: 12px; z-index: 3; }
+#forma-shop .fs-skip:focus { transform: none; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { #forma-shop .fs-spinner { animation: none; } }
+@media (max-width: 780px) {
+  #forma-shop .fs-header, #forma-shop .fs-footer { padding-left: 24px; padding-right: 24px; }
+}
+@media (max-width: 600px) {
+  #forma-shop .fs-header, #forma-shop .fs-footer { padding-left: 16px; padding-right: 16px; }
+  #forma-shop .fs-account-name { display: none; }
+  #forma-shop .fs-product-title { font-size: 14px; }
+  #forma-shop .fs-product-bottom .fs-button { width: 100%; }
+  #forma-shop .fs-line-item .fs-link { padding: 0; }
+  #forma-shop .fs-steps .fs-link { padding-left: 0; }
+}
+
+#forma-shop .fs-product { display: flex; flex-direction: column; }
+#forma-shop .fs-product-info { display: flex; flex-direction: column; flex: 1; }
+#forma-shop .fs-product-bottom { margin-top: auto; padding-top: 12px; }
